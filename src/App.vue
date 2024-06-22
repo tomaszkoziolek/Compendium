@@ -1,5 +1,5 @@
 <template>
-  <the-intro></the-intro>
+  <component :is="currentComponent"></component>
 </template>
 
 <script>
@@ -11,6 +11,11 @@ export default {
     TheHeader,
     TheIntro,
   },
+  data() {
+    return {
+      currentComponent: "the-intro",
+    };
+  },
 };
 </script>
 
@@ -21,8 +26,8 @@ export default {
 }
 
 body {
-  background-color: #0f0f0f;
+  background-color: #fff;
   font-family: sans-serif;
-  color: #e0e0e0;
+  color: #000;
 }
 </style>
