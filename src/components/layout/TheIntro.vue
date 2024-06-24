@@ -6,7 +6,7 @@
         <h1>Kompendium Prywatnych Projektów Web-Dev</h1>
         <h2>Tomasz Koziołek</h2>
         <!-- <a href="https://github.com/tomaszkoziolek">GitHub</a> -->
-        <button class="btn">
+        <button class="btn" @click="goToMainPage">
           <span class="circle">
             <span class="arrow"></span>
           </span>
@@ -19,6 +19,7 @@
 
 <script>
 export default {
+  emits: ["change-component"],
   data() {
     return {
       contentIsVisible: false,
@@ -28,6 +29,11 @@ export default {
     setTimeout(() => {
       this.contentIsVisible = true;
     }, 100);
+  },
+  methods: {
+    goToMainPage() {
+      this.$emit("change-component", "main-page");
+    },
   },
 };
 </script>
