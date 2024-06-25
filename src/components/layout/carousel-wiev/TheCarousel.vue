@@ -41,25 +41,13 @@
 </template>
 
 <script>
+import data from "/src/projects.json";
+
 export default {
   data() {
     return {
       currentProjectIndex: 0,
-      projects: [
-        {
-          img: "/src/images/sudoku.png",
-          title: "Sudoku",
-          description:
-            "Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1",
-          link: "https://tomaszkoziolek.github.io/Sudoku/",
-        },
-        {
-          img: "/src/images/goat-logo3.png",
-          title: "Zagadka Einsteina",
-          description: "Zagadka Einsteina testowy opis 2",
-          link: "https://tomaszkoziolek.github.io/Zagadka-Einsteina-Mini-Gra/",
-        },
-      ],
+      projects: data,
     };
   },
   methods: {
