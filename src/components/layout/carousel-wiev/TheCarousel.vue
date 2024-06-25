@@ -1,26 +1,25 @@
 <template>
   <div class="carousel">
-    <img src="/src/images/sudoku.png" alt="Sudoku" />
+    <img :src="projects[currentProjectIndex].img" alt="Sudoku" />
     <div class="description">
-      <h1 class="description-title">Tytuł</h1>
+      <h1 class="description-title">
+        {{ projects[currentProjectIndex].title }}
+      </h1>
       <p class="description-text">
-        <strong>Opis: </strong>Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Dolores asperiores et dicta quod ex expedita
-        temporibus? Tenetur ullam, animi sequi dignissimos nobis eos nulla iste
-        at autem sed doloribus et?
-      </p>
-      <p class="description-link">
-        <strong>Link: </strong>
-        <a href="#">Link</a>
+        <strong>Opis: </strong>{{ projects[currentProjectIndex].description }}
       </p>
       <button class="description-button">
         <span class="circle">
           <span class="arrow"></span>
         </span>
-        <span class="text">Przejdź do strony</span>
+        <span class="text"
+          ><a :href="projects[currentProjectIndex].link" target="_blank"
+            >Przejdź do strony</a
+          ></span
+        >
       </button>
     </div>
-    <button class="btn btn--left">
+    <button class="btn btn--left" @click="previousProject()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 -960 960 960"
@@ -29,7 +28,7 @@
         <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
       </svg>
     </button>
-    <button class="btn btn--right">
+    <button class="btn btn--right" @click="nextProject()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 -960 960 960"
@@ -40,6 +39,47 @@
     </button>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      currentProjectIndex: 0,
+      projects: [
+        {
+          img: "/src/images/sudoku.png",
+          title: "Sudoku",
+          description:
+            "Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1Sudoku testowy opis 1",
+          link: "https://tomaszkoziolek.github.io/Sudoku/",
+        },
+        {
+          img: "/src/images/goat-logo3.png",
+          title: "Zagadka Einsteina",
+          description: "Zagadka Einsteina testowy opis 2",
+          link: "https://tomaszkoziolek.github.io/Zagadka-Einsteina-Mini-Gra/",
+        },
+      ],
+    };
+  },
+  methods: {
+    previousProject() {
+      if (this.currentProjectIndex === 0) {
+        this.currentProjectIndex = this.projects.length - 1;
+      } else {
+        this.currentProjectIndex--;
+      }
+    },
+    nextProject() {
+      if (this.currentProjectIndex === this.projects.length - 1) {
+        this.currentProjectIndex = 0;
+      } else {
+        this.currentProjectIndex++;
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 * {
@@ -76,6 +116,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 270px;
 }
 
 .description-title {
@@ -86,12 +127,6 @@ img {
   font-size: 16px;
   margin-bottom: 20px;
   /* width: 400px; */
-}
-
-.description-link {
-  font-size: 18px;
-  margin-bottom: 20px;
-  align-self: flex-start;
 }
 
 .btn {
@@ -207,7 +242,7 @@ img {
 
 .text {
   position: absolute;
-  top: 10px;
+  top: 8px;
   left: 55px;
   font-size: 18px;
   /* line-height: 80px; */
@@ -218,7 +253,12 @@ img {
   transition: 0.5s;
 }
 
-.description-button:hover .text {
+.description-button a {
+  text-decoration: none;
+}
+
+.description-button:hover .text a {
+  text-decoration: none;
   color: #fff;
 }
 
@@ -253,6 +293,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 400px;
   }
 
   .description-title {
@@ -263,16 +304,6 @@ img {
     font-size: 18px;
     margin-bottom: 20px;
     width: 400px;
-  }
-
-  .description-link {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .description-button {
-    width: 200px;
-    height: 50px;
   }
 
   .btn {
