@@ -6,7 +6,7 @@
         {{ projects[currentProjectIndex].title }}
       </h1>
       <p class="description-text">
-        <strong>Opis: </strong>{{ projects[currentProjectIndex].description }}
+        {{ projects[currentProjectIndex].description }}
       </p>
       <button class="description-button">
         <span class="circle">
@@ -104,7 +104,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 270px;
+  /* max-width: 270px; */
 }
 
 .description-title {
@@ -292,6 +292,8 @@ img {
     font-size: 18px;
     margin-bottom: 20px;
     width: 400px;
+    height: 100px;
+    text-align: center;
   }
 
   .btn {

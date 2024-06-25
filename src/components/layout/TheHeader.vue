@@ -15,26 +15,22 @@
       </div>
     </div>
     <div class="right">
-      <the-nav></the-nav>
+      <!-- <the-nav></the-nav> -->
     </div>
   </header>
 </template>
 
 <script>
-import TheNav from "../UI/TheNav.vue";
+// import TheNav from "../UI/TheNav.vue";
 
 export default {
   components: {
-    TheNav,
+    // TheNav,
   },
 };
 </script>
 
 <style scoped>
-* {
-  /* color: white; */
-}
-
 header {
   /* background-color: red; */
   width: 100%;
@@ -87,11 +83,11 @@ a:hover {
   background-color: rgba(77, 77, 77, 0.636);
 }
 
-.right {
+/* .right {
   align-self: flex-start;
   margin-top: 30px;
   margin-left: 30px;
-}
+} */
 
 @media (min-width: 768px) {
   h1 {
