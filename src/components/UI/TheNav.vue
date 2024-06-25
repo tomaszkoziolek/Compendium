@@ -77,12 +77,13 @@ nav a {
   width: 100px;
   border-radius: 15px;
   text-decoration: none;
-  background-color: rgb(15, 0, 222);
+  background-color: rgb(77, 77, 77);
   color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 nav a:hover {
-  background-color: rgba(15, 0, 222, 0.786);
+  background-color: rgba(77, 77, 77, 0.636);
 }
 
 .sidebar {
@@ -91,14 +92,14 @@ nav a:hover {
   right: 0;
   z-index: 999;
   width: 150px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   display: none;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   gap: 10px;
-  margin-right: 0;
-  margin-top: 20px;
+  margin-right: 3px;
+  margin-top: 10px;
 }
 
 .menu-button {

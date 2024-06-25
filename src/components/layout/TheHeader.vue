@@ -3,9 +3,15 @@
     <div class="left">
       <img src="/src/images/goat-logo3.png" alt="Goat logo" />
       <div class="text-content">
-        <h1>Kompendium Projektów Web-Dev</h1>
+        <h1>Portfolio Projektów</h1>
+        <h1>Web-Dev</h1>
         <h2>Tomasz Koziołek</h2>
-        <a href="https://github.com/tomaszkoziolek?tab=repositories">GitHub</a>
+        <a
+          href="https://github.com/tomaszkoziolek?tab=repositories"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
       </div>
     </div>
     <div class="right">
@@ -26,7 +32,7 @@ export default {
 
 <style scoped>
 * {
-  color: white;
+  /* color: white; */
 }
 
 header {
@@ -35,6 +41,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
 .left {
@@ -49,11 +56,11 @@ img {
 }
 
 h1 {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 h2 {
-  font-size: 15px;
+  font-size: 14px;
   font-style: italic;
   font-weight: normal;
   margin-bottom: 5px;
@@ -62,12 +69,14 @@ h2 {
 a {
   display: inline-block;
   display: flex;
-  background-color: rgb(15, 0, 222);
+  background-color: rgb(77, 77, 77);
+  color: white;
   width: 100px;
   justify-content: center;
   align-items: center;
   height: 30px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 a:link {
@@ -75,7 +84,7 @@ a:link {
 }
 
 a:hover {
-  background-color: rgba(15, 0, 222, 0.786);
+  background-color: rgba(77, 77, 77, 0.636);
 }
 
 .right {

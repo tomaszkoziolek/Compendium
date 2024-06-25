@@ -3,7 +3,8 @@
     <div class="content" :class="{ show: contentIsVisible }">
       <img src="/src/images/goat-logo3.png" alt="Goat logo" />
       <div class="text-content">
-        <h1>Kompendium Prywatnych Projektów Web-Dev</h1>
+        <h1>Portfolio Projektów</h1>
+        <h1>Web-Dev</h1>
         <h2>Tomasz Koziołek</h2>
         <!-- <a href="https://github.com/tomaszkoziolek">GitHub</a> -->
         <button class="btn" @click="goToMainPage">
@@ -68,12 +69,9 @@ img {
   font-size: 12px;
 }
 
-h1 {
-  margin-bottom: 20px;
-}
-
 h2 {
   font-style: italic;
+  margin-top: 20px;
 }
 
 /* Button */
