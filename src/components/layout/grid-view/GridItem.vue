@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <img :src="img" alt="" />
+    <img :src="img" alt="test" />
     <h1>{{ title }}</h1>
     <p>{{ description }}</p>
     <button class="description-button">

@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="left">
-      <img src="/src/images/goat-logo3.png" alt="Goat logo" />
+      <!-- <img src="/src/images/goat-logo3.png" alt="Goat logo" /> -->
       <div class="text-content">
         <h1>Portfolio Projektów</h1>
         <h1>Web-Dev</h1>
@@ -43,6 +43,7 @@ header {
 .left {
   display: flex;
   align-items: center;
+  margin-left: 15px;
 }
 
 img {
