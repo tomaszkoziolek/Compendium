@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "private-compendium"
-  }
+    "default": "Compendium-demo",
+    "compendium": "compendium-demo-78559"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }
